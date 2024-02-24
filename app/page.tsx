@@ -3,6 +3,7 @@ import YieldTable from "@/components/yield-table";
 import { getBuenBitPrice, scrapeBuenBit, scrapeMercadoPago } from "@/lib/scrapper";
 import { Platform } from "@/lib/types";
 
+export const revalidate = 3600 // Revalidate every hour
 
 export default async function Home() {
   const MP_APY = await scrapeMercadoPago();
