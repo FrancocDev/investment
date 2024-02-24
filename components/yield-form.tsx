@@ -18,7 +18,7 @@ function YieldForm({}: Props) {
 
     return (
         <form className="flex flex-row gap-4 w-full" onSubmit={handleSubmit}>
-            <Input placeholder='$10000'/>
+            <Input placeholder='$10000' type="number"/>
             <Button>Calcular</Button>
         </form>
     )
