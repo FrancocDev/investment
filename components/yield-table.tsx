@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { Table, TableBody, TableCell, TableHead, TableRow } from './ui/table'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table'
 import { Platform } from '@/lib/types';
 import { YieldTime, getPerformance } from '@/lib/yields';
 import { useInvestment } from '@/lib/context';
@@ -12,10 +12,11 @@ type Props = {
 
 export default function YieldTable({data}: Props) {
     const {investment} = useInvestment()
-  return (
+    return (
     <div className="flex flex-col">
           <h2>Con una inversión de {investment} obtienes: </h2>
           <Table>
+            <TableHeader>
             <TableRow>
               <TableHead>Plataforma</TableHead>
               <TableHead>Moneda</TableHead>
@@ -25,8 +26,9 @@ export default function YieldTable({data}: Props) {
               <TableHead>Rendimiento mensual</TableHead>
               <TableHead>Rendimiento anual</TableHead>              
             </TableRow>
-
-            <TableBody>
+            </TableHeader>
+        
+        <TableBody>
           {data.map((platform) => (
             <TableRow key={platform.platform}>
               <TableCell>{platform.platform}</TableCell>
