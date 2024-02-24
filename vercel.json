@@ -1,0 +1,8 @@
+{
+    "crons": [
+      {
+        "path": "/lib/scraper",
+        "schedule": "0 * * * *"
+      }
+    ]
+  }
