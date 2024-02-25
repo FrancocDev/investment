@@ -16,11 +16,11 @@ export default async function Home() {
   ]
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-8">
-      <div className="flex flex-row gap-8 justify-center">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-8 w-full p-4">
+      <div className="flex flex-row gap-8 justify-center w-full">
       <h1 className="text-4xl">Calculadora de inversion</h1>
       </div>
-      <article className="flex flex-col gap-12">
+      <article className="flex flex-col gap-12 max-w-full">
         <div>
           Ingresa el monto en pesos:
           <YieldForm />
