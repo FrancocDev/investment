@@ -1,19 +1,27 @@
 # Inversion Calculator
 is a simple inversion calculator built using Next.js and MongoDB. It users to calculate the potential returns on their investments in two different platforms: MercadoPago and BuenBit.
+
 ![522shots_so](https://github.com/FrancocDev/investment/assets/6468230/4afc3800-edaf-4e67-a7f2-52c98c3b1bf4)
 
 ## Getting Started
 
 Clone the repository:
+
 `git clone https://github.com/francocdev/investment.git`
 
 Install the dependencies:
+
 `npm install`
 
 Run the development server:
+
 `npm run dev`
 
+### Deploy to vercel
+To deploy this project on vercel, you need to setup the enviroment variable `VERCEL_FORCE_NO_BUILD_CACHE` to `1` to avoid using cache at build because it can't use puppetter from past builds.
+
 ## How it Works
+
 The app consists of two main components: YieldForm and YieldTable.
 
 YieldForm is a form that allows users to input the amount they want to invest in either MercadoPago or BuenBit.
